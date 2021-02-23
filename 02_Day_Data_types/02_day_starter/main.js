@@ -74,3 +74,41 @@ console.log(Math.floor(Math.random() * javascript.length));
 let because =
   'You cannot end a sentence with because because because is a conjunction';
 console.log(because.substr(30, 25));
+
+let countLove =
+  'Love is the best thing in this world. Some found their love and some are still looking for their love.';
+let love = /love/gi;
+console.log(countLove.match(love).length);
+
+let becauseSentence =
+  'You cannot end a sentence with because because because is a conjunction';
+let becauseGi = /because/gi;
+console.log(becauseSentence.match(becauseGi).length);
+
+const sentence =
+  '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
+let newSentence = sentence.replace(/[^\w\s]/gi, '');
+function findWord(str) {
+  let count = {},
+    mr,
+    mc;
+  str.match(/\w+/g).forEach(function (w) {
+    count[w] = (count[w] || 0) + 1;
+  });
+  for (let w in count) {
+    if (!(count[w] < mc)) {
+      mc = count[w];
+      mr = w;
+    }
+  }
+  return mr;
+}
+console.log(findWord(newSentence));
+
+let salary =
+  'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+salary = salary.match(/\d+/g);
+salary = salary.map((s) => parseInt(s));
+salary = salary.reduce(reducer);
+console.log(salary);
