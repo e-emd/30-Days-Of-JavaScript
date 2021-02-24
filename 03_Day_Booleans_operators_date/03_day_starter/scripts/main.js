@@ -66,3 +66,15 @@ console.log(date.getDay());
 console.log(date.getHours());
 console.log(date.getMinutes());
 console.log(date.getTime());
+
+// Exercise: level 2
+
+// Exercise: level 3
+const dateFormat = new Date();
+const YYYY = dateFormat.getFullYear();
+const MM = dateFormat.getMonth() + 1;
+const DD = dateFormat.getDate();
+const HH = (date) => ('0' + (date.getHours() % 12 || 12)).slice(-2);
+const mm = date.getMinutes();
+
+console.log(`${YYYY}-${MM}-${DD} ${HH(dateFormat)}:${mm}`);
