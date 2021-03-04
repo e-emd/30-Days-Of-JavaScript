@@ -49,3 +49,47 @@ if (number % 2 === 0) {
 } else {
   console.log(`${number} is odd`);
 }
+
+// Exercises: level 2
+// 1
+let grade = 100;
+switch (true) {
+  case grade > 90 && grade < 100:
+    console.log(`${grade}% you got a A`);
+    break;
+  case grade > 70 && grade < 89:
+    console.log(`${grade}% you got a B`);
+    break;
+  case grade > 60 && grade < 69:
+    console.log(`${grade}% you got a C`);
+    break;
+  case grade > 50 && grade < 59:
+    console.log(`${grade}% you got a D`);
+    break;
+  case grade > 0 && grade < 49:
+    console.log(`${grade}% you got a F`);
+    break;
+  default:
+    console.log(grade);
+}
+
+// 2
+let monthInput = prompt('Enter a month');
+let month = monthInput.toLowerCase();
+
+switch (month) {
+  case 'september' || 'october' || 'november':
+    console.log('The season is Autumn');
+    break;
+  case 'december' || 'january' || 'february':
+    console.log('The season is Winter');
+    break;
+  case 'march' || 'april' || 'may':
+    console.log('The season is Spring');
+    break;
+  case 'june' || 'july' || 'august':
+    console.log('The season is summer');
+    break;
+  default:
+    console.log('Invalid month');
+}
