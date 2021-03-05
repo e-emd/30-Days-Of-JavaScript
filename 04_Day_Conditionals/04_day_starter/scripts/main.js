@@ -76,6 +76,7 @@ switch (true) {
 // 2
 let monthInput = prompt('Enter a month');
 let month = monthInput.toLowerCase();
+let monthNum;
 
 switch (month) {
   case 'september' || 'october' || 'november':
@@ -93,3 +94,41 @@ switch (month) {
   default:
     console.log('Invalid month');
 }
+
+if (month === 'january') {
+  monthNum = 1;
+} else if (month === 'february') {
+  monthNum = 2;
+} else if (month === 'march') {
+  monthNum = 3;
+} else if (month === 'april') {
+  monthNum = 4;
+} else if (month === 'may') {
+  monthNum = 5;
+} else if (month === 'june') {
+  monthNum = 6;
+} else if (month === 'july') {
+  monthNum = 7;
+} else if (month === 'august') {
+  monthNum = 8;
+} else if (month === 'september') {
+  monthNum = 9;
+} else if (month === 'october') {
+  monthNum = 10;
+} else if (month === 'november') {
+  monthNum = 11;
+} else if (month === 'december') {
+  monthNum = 12;
+}
+console.log(monthNum);
+// exercise: level 3
+let yearText = prompt('What year is it?');
+let year = parseFloat(yearText);
+console.log(year);
+
+const getDaysInMonth = (x, y) => {
+  let newDate = new Date(y, x, 0).getDate();
+  return console.log(newDate);
+};
+
+console.log(getDaysInMonth(monthNum, year));
