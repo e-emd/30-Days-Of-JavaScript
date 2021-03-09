@@ -4,15 +4,6 @@ alert('Open the console and check if the countries has been loaded');
 
 // Exercise: Level 1
 let arr = [];
-const webTechs = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Redux',
-  'Node',
-  'MongoDB',
-];
 const middleArr = webTechs[Math.floor(webTechs.length / 2)];
 const lastItem = webTechs[webTechs.length - 1];
 let mixedDataTypes = [
@@ -75,3 +66,35 @@ console.log(itCompanies.slice(1, Math.floor(itCompanies.length / 2)));
 console.log(itCompanies.shift());
 console.log(itCompanies.pop());
 console.log(itCompanies.splice());
+
+// Exercise level 2
+let text =
+  'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.';
+let noPun = text.replace(/[^\w\s]|_/g, ''); // regex to remove punctuations
+let words = noPun.split(' ');
+
+console.log(words);
+console.log(words.length);
+
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+shoppingCart.splice(2, 1, 'Green Tea'); // modify tea to green tea
+const allergic = prompt('Are you allergic to honey yes or no?');
+console.log(shoppingCart.unshift('Meat')); // add Meat to the begging
+console.log(shoppingCart.push('Sugar')); // add sugar to the end
+allergic === 'yes'
+  ? console.log(shoppingCart.filter((x) => x !== 'Honey'))
+  : console.log(shoppingCart); // remove honey if allergic to it
+
+let ethiopia = countries.includes('Ethiopia');
+ethiopia ? console.log('ETHIOPIA') : console.log(countries.push('Ethiopia'));
+
+let sass = 'Sass';
+let includesSass = webTechs.includes(sass);
+includesSass
+  ? console.log(`${sass} is a CSS preprocess`)
+  : console.log([...webTechs, sass]);
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+const backEnd = ['Node', 'Express', 'MongoDB'];
+const fullStack = [...frontEnd, ...backEnd];
+console.log(fullStack);
