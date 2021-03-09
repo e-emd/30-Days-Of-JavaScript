@@ -98,3 +98,50 @@ const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
 const backEnd = ['Node', 'Express', 'MongoDB'];
 const fullStack = [...frontEnd, ...backEnd];
 console.log(fullStack);
+
+// exercise level 3
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort((a, b) => a - b);
+let ageMin = ages.reduce(
+  ({ max, min }, v) => ({
+    min: min < v ? min : v,
+    max: max > v ? max : v,
+  }),
+  { min: ages[0], max: ages[0] }
+);
+
+const median = (arr) => {
+  const mid = Math.floor(arr.length / 2);
+  num = [...arr].sort((a, b) => a - b);
+  return arr.length % 2 !== 0 ? num[mid] : (num[mid - 1] + num[mid]) / 2;
+};
+
+const average = (arr) => {
+  const total = arr.reduce((acc, c) => acc + c, 0);
+  return total / arr.length;
+};
+
+let min = ages.indexOf(19);
+let max = ages.lastIndexOf(26);
+let range = max - min;
+
+let compareMin = Math.abs(min - average(ages));
+let compareMax = Math.abs(max - average(ages));
+
+console.log(ages);
+console.log(ageMin);
+console.log(median(ages));
+console.log(average(ages));
+console.log(range);
+console.log(compareMin);
+console.log(compareMax);
+
+console.log(countries.slice(0, 10));
+console.log(countries[Math.floor(countries.length / 2)]);
+
+const half = Math.ceil(countries.length / 2);
+const firstHalf = countries.splice(0, half);
+const secondHalf = countries.splice(-half);
+
+console.log(firstHalf);
+console.log(secondHalf);
