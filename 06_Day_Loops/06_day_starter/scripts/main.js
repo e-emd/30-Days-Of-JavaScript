@@ -75,3 +75,12 @@ for (let i = 0; i <= 100; i++) {
   const sum = (i * (i + 1)) / 2;
   console.log(sum);
 }
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i + i);
+  }
+  if (i % 3 === 0) {
+    console.log(i + i);
+  }
+}
