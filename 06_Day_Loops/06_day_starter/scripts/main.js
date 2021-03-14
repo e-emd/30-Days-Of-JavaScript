@@ -84,3 +84,27 @@ for (let i = 0; i <= 100; i++) {
     console.log(i + i);
   }
 }
+
+let ranNumber = [];
+for (let i = 0; i < 5; i++) {
+  let random = Math.floor(Math.random() * 100 + 1);
+  ranNumber.push(random);
+}
+console.log(ranNumber);
+
+let uniqueNumber = [];
+while (uniqueNumber.length < 5) {
+  let ran = Math.floor(Math.random() * 5 + 1);
+  if (uniqueNumber.indexOf(ran) === -1) uniqueNumber.push(ran);
+}
+console.log(uniqueNumber);
+
+let ranCharacters = '';
+let character = 'abcdefghijklmnopqrstuvwxyz0123456789';
+for (let i = 0; i < 6; i++) {
+  ranCharacters += character.charAt(
+    Math.floor(Math.random() * character.length)
+  );
+}
+
+console.log(ranCharacters);
