@@ -106,5 +106,4 @@ for (let i = 0; i < 6; i++) {
     Math.floor(Math.random() * character.length)
   );
 }
-
 console.log(ranCharacters);
