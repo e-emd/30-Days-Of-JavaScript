@@ -107,3 +107,63 @@ for (let i = 0; i < 6; i++) {
   );
 }
 console.log(ranCharacters);
+
+// Exercise: Level 2
+let id = '';
+for (let i = 0; i < 10; i++) {
+  id += character.charAt(Math.floor(Math.random() * character.length));
+}
+console.log(id);
+
+let decimal = '0123456789ABCDEF';
+let hex = '#';
+let hexadecimal = '';
+for (let i = 0; i < 6; i++) {
+  hexadecimal += decimal[Math.floor(Math.random() * 16)];
+}
+console.log(`${hex}${hexadecimal}`);
+
+let rgb1 = 0;
+let rgb2 = 0;
+let rgb3 = 0;
+for (let i = 0; i < 3; i++) {
+  if (i === 1) {
+    rgb1 += Math.floor(Math.random() * 250 + 1);
+  } else if (i === 2) {
+    rgb2 += Math.floor(Math.random() * 250 + 1);
+  } else {
+    rgb3 += Math.floor(Math.random() * 250 + 1);
+  }
+}
+console.log(`rgb(${rgb1},${rgb2},${rgb3})`);
+
+const newCountry = [];
+for (const countriesCap of countries1) {
+  newCountry.push(countriesCap.toUpperCase());
+}
+console.log(newCountry);
+
+const newLength = [];
+for (const countriesLength of countries1) {
+  newLength.push(countriesLength.length);
+}
+console.log(newLength);
+
+const first3 = [];
+for (const countries3 of countries1) {
+  first3.push(countries3.slice(0, 3).toUpperCase());
+}
+console.log(first3);
+
+const newCountryArr = [];
+for (let i = 0; i < countries1.length; i++) {
+  newCountryArr.push([countries1[i], first3[i], newLength[i]]);
+}
+console.log(newCountryArr);
+
+const containsLand = (a, b) => {
+  const typeArr = [...a, ...b];
+  const typeSet = new Set(typeArr);
+  return typeArr.length > typeSet.size;
+};
+console.log(containsLand(['land'], countries1));
